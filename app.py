@@ -105,7 +105,6 @@ trans = "Transmission_" + Transmission
 
 if car in final_input.columns:
     final_input.loc[0, car] = 1
-
 if fuel in final_input.columns:
     final_input.loc[0, fuel] = 1
 
@@ -123,3 +122,4 @@ final_input[num_col] = scaler.transform(final_input[num_col])
 prediction = model.predict(final_input)
 
 st.success(f"Predicted Selling Price: ₹ {prediction[0]:,.2f} Lakhs")
+
